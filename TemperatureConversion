@@ -1,0 +1,49 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class TemperatureConversion {
+	Scanner ip=new Scanner(System.in);
+	public float celToFah(){
+		System.out.println("\nEnter Celsious value to convert to Fahrenheit ");
+		float f=ip.nextFloat();
+		System.out.println("\nYou Entered "+f+" °Celsious ");
+		float con1=f*9/5+32;
+		return con1;
+	}
+	public float fahToCel(){
+		System.out.println("\nEnter value to convert Fahrenheit  to Celcious");
+		float f2=ip.nextFloat();
+		System.out.println("\nYou Entered "+f2+" °Fahrenheit ");
+		float con2=(f2-32)*5/9;
+		return con2;
+	}
+
+	public static void main(String[] args) {
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Press 1 to convert Celsious to Fahrenheit \nPress 2 to convert Fahrenheit  \nPress 3 to convert both Celsious to Fahrenheit and vice versa");
+		int value=scanner.nextInt();
+		TemperatureConversion cf=new TemperatureConversion();
+		if(value==1){
+			System.out.println("***You are Converting Celsious to Fahrenheit***");
+			float v1=cf.celToFah();
+			System.out.println("\n°C to °F = "+v1+" °Fahrenheit ");
+			}
+			else if(value==2){
+			System.out.println("***You are Converting Fahrenheit to Celsious*** ");
+			float v2=cf.fahToCel();
+			System.out.println("\n°F to °C = "+v2+" °Celsious ");
+			}
+			else if(value==3){
+			System.out.println("***You are converting both °C to °F and °F to °C***");
+			float v1=cf.celToFah();
+			float v2=cf.fahToCel();
+			System.out.println("\n°C to °F = "+v1+" °Fahrenheit ");
+			System.out.println("°F to °C = "+v2+" °Celsious ");
+			}else{
+			System.err.println("Invalid no!! Please enter the no between 1 and 3");
+		}
+		
+	}
+	
+}
