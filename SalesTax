@@ -1,0 +1,20 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class SalesTax {
+	
+	public static void main(String[] args) {
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Input price:");
+		float price=ip.nextFloat();
+		System.out.println("Input tax rate in percentage");
+		float rate=ip.nextFloat();
+		float taxAmount=price+((price/100)*rate);
+		System.out.println("Amount is Rs "+price);
+		System.out.println("Rate is "+rate+" % ");
+		System.out.println("Sales tax is Rs "+taxAmount );
+		float netTax=taxAmount-price;
+		System.out.println("Net Tax is "+netTax);
+	}
+}
