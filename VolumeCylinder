@@ -1,0 +1,22 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class VolumeCylinder {
+		
+	public static void main(String[] args) {
+		
+		//VolumeCylinder volume=new VolumeCylinder();
+		//volume.showVolume();
+		System.out.println(VolumeCylinder.showVolume());	
+	}
+	public static float showVolume(){
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Enter radius : ");
+		float radius=ip.nextFloat();
+		System.out.println("Enter Volume : ");
+		float height=ip.nextFloat();
+		float vol=(float)Math.PI*radius*radius*height;
+		return vol;
+	}
+}
