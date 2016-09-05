@@ -1,0 +1,17 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class SimpleInterest {
+	public static void main(String[] args) {
+		final int rate=10;
+		Scanner ip=new Scanner(System.in);
+		System.out.println("Enter Principal ");
+		float principal=ip.nextFloat();
+		System.out.println("Enter Time ");
+		float time=ip.nextFloat();
+		float si=(principal*time*rate)/100;
+		float total=si+principal;
+		System.out.println("Simple Interest @ 10 % rate is "+si+" Total Amount is "+total);
+	}
+}
