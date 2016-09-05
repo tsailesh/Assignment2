@@ -1,0 +1,15 @@
+package assignment2;
+
+import java.util.Scanner;
+
+public class PoundToKg {
+	
+	public static void main(String[] args) {
+		Scanner ip=new Scanner(System.in);
+		System.out.println("How Many Pound ? ");
+		float pound=ip.nextFloat();
+		float kg=pound*(float)0.454;
+		System.out.println(pound+" Pound = "+kg+" KG ");
+	}
+	
+}
